@@ -10,9 +10,9 @@ TAGS_ENDPOINT = 'https://api.imagga.com/v2/tags'
 @app.route('/')
 def index():
     images = [
-        'https://i.postimg.cc/XrzfZwzH/image1.jpg',  # Foto 1
-        'https://i.postimg.cc/QBKpcFLX/image2.jpg',  # Foto 2
-        'https://i.postimg.cc/Yv9NqXbL/image3.jpg'   # Foto 3
+        'https://i.postimg.cc/XrzfZwzH/image1.jpg',  
+        'https://i.postimg.cc/QBKpcFLX/image2.jpg',  
+        'https://i.postimg.cc/Yv9NqXbL/image3.jpg'   
     ]
     return render_template('index.html', images=images)
 
@@ -29,7 +29,7 @@ def analyze():
         response.raise_for_status()
         
         data = response.json()
-        tags = data.get('result', {}).get('tags', [])[:2]  # Solo los dos resultados principales
+        tags = data.get('result', {}).get('tags', [])[:2]  
         return render_template('result.html', tags=tags, image_url=image_url)
     except requests.exceptions.RequestException as e:
         return f"Error al conectar con Imagga: {e}", 500

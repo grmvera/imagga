@@ -25,9 +25,13 @@ Sigue estos pasos para ejecutar la WebApp:
    git clone https://github.com/tu-usuario/tu-repo.git
    cd tu-repo
 2. **Agrega tus claves de Imagga**
+   Abre el archivo app.py.
+   Reemplaza los valores de IMAGGA_API_KEY y IMAGGA_API_SECRET.
+   ```bash
+   IMAGGA_API_KEY = 'tu_api_key'
+   IMAGGA_API_SECRET = 'tu_api_secret'
 
-Abre el archivo app.py.
-Reemplaza los valores de IMAGGA_API_KEY y IMAGGA_API_SECRET con tus credenciales de la API.
+
 
 3. **Construye la imagen Docker**
     ```bash

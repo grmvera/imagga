@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados del Análisis</title>
+</head>
+<body>
+    <h1>Resultados del Análisis</h1>
+    <img src="{{ image_url }}" alt="Imagen Analizada" width="300">
+    <h2>Etiquetas:</h2>
+    <ul>
+        {% for tag in tags %}
+        <li>{{ tag['tag']['en'] }} (Confianza: {{ tag['confidence'] }}%)</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Volver</a>
+</body>
+</html>
